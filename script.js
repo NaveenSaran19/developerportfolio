@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // 6. Active Link Highlighting
-    const currentLocation = window.location.pathname.split("/").pop() || "index.html";
+    // 6. Active Link Highlighting (Clean URLs)
+    const currentLocation = window.location.pathname.split("/").pop() || "index";
     document.querySelectorAll('.nav-menu a').forEach(link => {
         const linkPath = link.getAttribute('href');
         if (linkPath === currentLocation) {
@@ -170,6 +170,95 @@ document.addEventListener('DOMContentLoaded', function () {
         if (heroSection) {
             heroSection.style.transform = `translateY(${scrolled * 0.15}px)`;
         }
+    });
+
+    // 11. Custom Cursor & Confetti "Gift Paper" Effect
+    const cursor = document.createElement('div');
+    const follower = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    follower.className = 'cursor-follower';
+    document.body.appendChild(cursor);
+    document.body.appendChild(follower);
+
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    let followerX = 0, followerY = 0;
+
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+        // Smooth movement
+        cursorX += (mouseX - cursorX) * 0.2;
+        cursorY += (mouseY - cursorY) * 0.2;
+        followerX += (mouseX - followerX) * 0.1;
+        followerY += (mouseY - followerY) * 0.1;
+
+        cursor.style.left = `${cursorX - 4}px`;
+        cursor.style.top = `${cursorY - 4}px`;
+        follower.style.left = `${followerX - 15}px`;
+        follower.style.top = `${followerY - 15}px`;
+
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Gift Paper Confetti Effect on Click
+    window.addEventListener('mousedown', (e) => {
+        cursor.style.transform = 'scale(0.8)';
+        follower.style.transform = 'scale(1.2)';
+
+        // Create confetti particles
+        const colors = ['#3B82F6', '#00ffcc', '#ffffff', '#ff007f', '#ffff00'];
+        for (let i = 0; i < 15; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'confetti-particle';
+
+            const size = Math.random() * 8 + 4;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.background = color;
+            particle.style.left = `${e.clientX}px`;
+            particle.style.top = `${e.clientY}px`;
+
+            // Random direction and rotation
+            const destX = (Math.random() - 0.5) * 200;
+            const destY = (Math.random() - 0.5) * 200;
+            const rotation = Math.random() * 360;
+
+            particle.style.setProperty('--x', `${destX}px`);
+            particle.style.setProperty('--y', `${destY}px`);
+            particle.style.setProperty('--r', `${rotation}deg`);
+
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 1000);
+        }
+    });
+
+    window.addEventListener('mouseup', () => {
+        cursor.style.transform = 'scale(1)';
+        follower.style.transform = 'scale(1)';
+    });
+
+    // Cursor hover effects on links/buttons
+    document.querySelectorAll('a, button, .service-tag').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            follower.style.transform = 'scale(2)';
+            follower.style.borderColor = 'var(--cyan)';
+            follower.style.background = 'rgba(0, 255, 204, 0.1)';
+        });
+        el.addEventListener('mouseleave', () => {
+            follower.style.transform = 'scale(1)';
+            follower.style.borderColor = 'var(--primary-blue)';
+            follower.style.background = 'transparent';
+        });
     });
 
 });
