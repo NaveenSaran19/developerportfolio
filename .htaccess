@@ -1,0 +1,17 @@
+# Disable Directory Browsing
+Options -Indexes
+
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Remove .html extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Redirect .html to clean URL (optional - prevents direct access to .html files)
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+
+# Custom Error Pages
+ErrorDocument 404 /index.html
