@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="About Naveen Saravanan — Full Stack Web Developer & UI/UX Designer">
+    <title>About Me | Naveen S - Developer Portfolio</title>
+    <link rel="icon" type="image/png" href="img/CVV.jpeg" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-logo-wrapper">
+            <div class="loader-circle"></div>
+            <img src="img/naveen.jpg" alt="Naveen" class="loader-logo">
+        </div>
+        <div class="loader-text">Naveen Developer</div>
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-section" style="text-decoration: none;">
+                <img src="img/naveen.jpg" alt="Naveen" class="logo-img">
+                <span class="logo-text">Naveen Freelancer</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="contact.html" class="cta-button">Let's Talk</a>
+        </div>
+    </header>
+
+    <main class="bento-container">
+
+        <!-- CENTERED PROFILE HERO -->
+        <article class="bento-card profile-card full-width-hero hero-centered">
+            <div class="profile-img-wrapper">
+                <img src="img/naveen.jpg" alt="Naveen Saravanan" class="profile-main-img">
+                <div class="availability-tag">
+                    <span class="pulse-dot"></span> Available For Hire
+                </div>
+            </div>
+            <div class="hero-text-content">
+                <h1 class="profile-name">Naveen Saravanan 👋</h1>
+                <p class="profile-headline">Full Stack Web Developer & UI/UX Designer</p>
+                <p class="profile-bio" style="max-width: 800px;">
+                    I am a dedicated Full-Stack Web Developer with over 2 years of experience in creating
+                    high-performance, responsive web applications and stunning UI/UX designs.
+                </p>
+                <div class="profile-btns">
+                    <a href="contact.html" class="btn btn-blue" style="padding: 1rem 2.5rem;">Book A Call</a>
+                    <button class="btn btn-outline" id="copyEmailBtn" style="padding: 1rem 2.5rem;">
+                        <i class="fas fa-envelope"></i> Copy Email
+                    </button>
+                </div>
+            </div>
+        </article>
+
+        <!-- ABOUT TEXT SECTION -->
+        <article class="bento-card about-text-card">
+            <h2 class="card-title"><i class="fas fa-user"></i> Professional Journey</h2>
+            <div class="about-content">
+                <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+                    My journey in web development started with a curiosity about how things work on the internet.
+                    Today, I specialize in building robust backends with PHP and MySQL, and interactive frontends using
+                    React and modern JavaScript.
+                </p>
+                <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
+                    Currently, I work at <strong>Vexora Solution & Web Services LLP</strong>, where I focus on
+                    delivering
+                    scalable web solutions for clients globally. I believe in writing clean, maintainable code and
+                    providing
+                    an exceptional user experience.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-number">02+</span>
+                        <span class="stat-label">Years Exp.</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- EDUCATION SECTION -->
+        <article class="bento-card education-card">
+            <h2 class="card-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="exp-list">
+                <div class="exp-item">
+                    <div class="exp-icon"><i class="fas fa-university"></i></div>
+                    <div class="exp-info">
+                        <div class="exp-date">2020 – 2023</div>
+                        <h3 class="exp-role">Bachelor of Engineering</h3>
+                        <p class="exp-company">Muthayammal Engineering College, Rasipuram</p>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="exp-info">
+                        <div class="exp-date">2017 – 2020</div>
+                        <h3 class="exp-role">Diploma in Mechanical Engineering</h3>
+                        <p class="exp-company">Muthayammal Polytechnic Institution, Rasipuram</p>
+                    </div>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-icon"><i class="fas fa-school"></i></div>
+                    <div class="exp-info">
+                        <div class="exp-date">2016 – 2017</div>
+                        <h3 class="exp-role">SSLC</h3>
+                        <p class="exp-company">Royal Park Matriculation Higher Secondary School, Salem</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- CONNECT CARD -->
+        <article class="bento-card connect-card" style="grid-column: span 12; text-align: center;">
+            <h2 class="card-title" style="justify-content: center;"><i class="fas fa-share-alt"></i> Let's Connect</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Find me on social media or send a message.</p>
+            <div class="social-strip" style="border: none; padding: 0;">
+                <a href="https://www.linkedin.com/in/naveen-s-4813ab291/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/NaveenSaran19" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/919087590967" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:naaveensaaran.01319@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </article>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's work together to bring your ideas to life!</p>
+                <a href="contact.html" class="cta-btn">
+                    <span>Let's 👋 Work Together</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Naveen Saravanan — All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

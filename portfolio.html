@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Naveen Saravanan's Portfolio — Web Development & UI/UX Projects">
+    <title>Portfolio | Naveen S - Developer Portfolio</title>
+    <link rel="icon" type="image/png" href="img/CVV.jpeg" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader-logo-wrapper">
+            <div class="loader-circle"></div>
+            <img src="img/naveen.jpg" alt="Naveen" class="loader-logo">
+        </div>
+        <div class="loader-text">Naveen Developer</div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-section" style="text-decoration: none;">
+                <img src="img/naveen.jpg" alt="Naveen" class="logo-img">
+                <span class="logo-text">Naveen Freelancer</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="contact.html" class="cta-button">Let's Talk</a>
+        </div>
+    </header>
+
+    <main class="bento-container">
+
+        <!-- CENTERED PROFILE HERO -->
+        <article class="bento-card profile-card full-width-hero hero-centered">
+            <div class="profile-img-wrapper">
+                <img src="img/naveen.jpg" alt="Naveen Saravanan" class="profile-main-img">
+                <div class="availability-tag">
+                    <span class="pulse-dot"></span> Available For Hire
+                </div>
+            </div>
+            <div class="hero-text-content">
+                <h1 class="profile-name">Naveen Saravanan 👋</h1>
+                <p class="profile-headline">Full Stack Web Developer & UI/UX Designer</p>
+                <p class="profile-bio">
+                    Showcasing a curated collection of high-performance web applications,
+                    creative UI designs, and technical solutions.
+                </p>
+                <div class="profile-btns">
+                    <a href="contact.html" class="btn btn-blue" style="padding: 1rem 2.5rem;">Book A Call</a>
+                    <button class="btn btn-outline" id="copyEmailBtn" style="padding: 1rem 2.5rem;">
+                        <i class="fas fa-envelope"></i> Copy Email
+                    </button>
+                </div>
+                <div class="social-strip"
+                    style="border-top: 1px solid var(--border-color); padding-top: 1.5rem; margin-top: 2rem;">
+                    <a href="https://www.linkedin.com/in/naveen-s-4813ab291/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/NaveenSaran19" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/919087590967" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:naaveensaaran.01319@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <!-- PORTFOLIO GRID -->
+        <article class="bento-card portfolio-section-card" style="grid-column: span 12;">
+            <h2 class="card-title" style="margin-bottom: 2.5rem;"><i class="fas fa-laptop-code"></i> My Creative Works
+            </h2>
+            <div class="portfolio-grid">
+
+                <a href="#" class="project-item-card">
+                    <div class="project-img-container">
+                        <img src="img/broadband.jpg" alt="Broadband Management"
+                            onerror="this.src='https://via.placeholder.com/600x400/1a1a2e/00ffcc?text=Broadband+System'">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Networking | Management System</span>
+                        <h3 class="project-name">Broadband Management</h3>
+                        <p class="project-desc">A sophisticated platform for internet service providers to manage
+                            subscriptions and billing.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-item-card">
+                    <div class="project-img-container">
+                        <img src="img/rk-ent.jpg" alt="Rk-Enterprise"
+                            onerror="this.src='https://via.placeholder.com/600x400/1a1a2e/00ffcc?text=Rk-Enterprise'">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Web Solution | Private</span>
+                        <h3 class="project-name">Rk-Enterprise</h3>
+                        <p class="project-desc">A comprehensive business management platform designed for enterprise
+                            operations efficiency.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-item-card">
+                    <div class="project-img-container">
+                        <img src="img/salary.jpg" alt="vexora_Salary_slip"
+                            onerror="this.src='https://via.placeholder.com/600x400/1a1a2e/00ffcc?text=Salary+Slip+System'">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">PHP | Private</span>
+                        <h3 class="project-name">vexora_Salary_slip</h3>
+                        <p class="project-desc">Automated salary slip generation system for startups, handling CTC
+                            structures.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-item-card">
+                    <div class="project-img-container">
+                        <img src="img/saree.jpg" alt="sareeworlds"
+                            onerror="this.src='https://via.placeholder.com/600x400/1a1a2e/00ffcc?text=sareeworlds'">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">PHP MySQL | E-commerce</span>
+                        <h3 class="project-name">sareeworlds</h3>
+                        <p class="project-desc">Specialized e-commerce platform for ethnic wear, featuring advanced
+                            filtering.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-item-card">
+                    <div class="project-img-container">
+                        <img src="img/media.jpg" alt="asmediaaa"
+                            onerror="this.src='https://via.placeholder.com/600x400/1a1a2e/00ffcc?text=asmediaaa'">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Media Platform | Public</span>
+                        <h3 class="project-name">asmediaaa</h3>
+                        <p class="project-desc">Digital media platform for content aggregation and professional
+                            distribution.</p>
+                    </div>
+                </a>
+
+                <a href="#" class="project-item-card">
+                    <div class="project-img-container">
+                        <img src="img/portfolio-dev.jpg" alt="Developer Portfolio"
+                            onerror="this.src='https://via.placeholder.com/600x400/1a1a2e/00ffcc?text=Portfolio+Website'">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">HTML CSS JS | Professional</span>
+                        <h3 class="project-name">Developer-Portfolio</h3>
+                        <p class="project-desc">A premium, interactive developer portfolio showcasing high-end technical
+                            expertise.</p>
+                    </div>
+                </a>
+
+            </div>
+        </article>
+
+        <!-- CTA SECTION -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's work together to bring your ideas to life!</p>
+                <a href="contact.html" class="cta-btn">
+                    <span>Let's 👋 Work Together</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Naveen Saravanan — All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
