@@ -116,6 +116,8 @@
                 <input type="hidden" name="time" id="time">
                 <!-- Hidden To Name for Email Template -->
                 <input type="hidden" name="to_name" value="Naveen">
+                <!-- Hidden To Email for Email Template (Fallback) -->
+                <input type="hidden" name="to_email" value="naaveensaaran.01319@gmail.com">
                 <button type="submit" class="btn btn-blue" style="width: 100%;">Send Message</button>
             </form>
         </article>
@@ -155,47 +157,47 @@
         <p>© 2025 Naveen Saravanan — All Rights Reserved.</p>
     </footer>
 
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<script>
-(function () {
-    emailjs.init({
-        publicKey: "yEj83J-he6xwT6yzC"
-    });
-})();
+    <script>
+        (function () {
+            emailjs.init({
+                publicKey: "yEj83J-he6xwT6yzC"
+            });
+        })();
 
-document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    // Set date & time
-    document.getElementById('time').value =
-        new Date().toLocaleString('en-IN');
+            // Set date & time
+            document.getElementById('time').value =
+                new Date().toLocaleString('en-IN');
 
-    const btn = this.querySelector('button');
-    const originalText = btn.textContent;
+            const btn = this.querySelector('button');
+            const originalText = btn.textContent;
 
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
 
-    emailjs.sendForm(
-        'service_m4h9rer',   // Service ID
-        'template_kr6bjp2',  // Template ID
-        this
-    )
-    .then(() => {
-        alert('Message sent successfully!');
-        this.reset();
-    })
-    .catch(error => {
-        alert('Failed to send message.');
-        console.error('EmailJS Error:', error);
-    })
-    .finally(() => {
-        btn.textContent = originalText;
-        btn.disabled = false;
-    });
-});
-</script>
+            emailjs.sendForm(
+                'service_m4h9rer',   // Service ID
+                'template_kr6bjp2',  // Template ID
+                this
+            )
+                .then(() => {
+                    alert('Message sent successfully!');
+                    this.reset();
+                })
+                .catch(error => {
+                    alert('Failed to send message. Error: ' + JSON.stringify(error));
+                    console.error('EmailJS Error:', error);
+                })
+                .finally(() => {
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                });
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
